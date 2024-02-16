@@ -3,9 +3,6 @@ import './index.css'
 function App() {
 
   return (
-    // <div>
-    //   <Button>Click me</Button>
-    // </div>
     <>
     <MyProfile />
     </>

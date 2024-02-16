@@ -5,7 +5,7 @@
  
 // import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import '../index.css'
+// import '../index.css'
 
 const MyProfile = () =>{
   return (
