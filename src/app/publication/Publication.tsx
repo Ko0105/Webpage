@@ -122,6 +122,26 @@ export default function MyEducation() {
            </div>
         </div>
 
+        <div className="grid items-start gap-4 py-8">
+          <div className="space-y-2">
+          <h2 className="text-2xl font-bold tracking-tight">
+          Precise prediction of open circuit voltage of lithium ion batteries in a short time period. 
+          </h2>
+             <p className="text-gray-500 grid gap-1.5 items-center text-lg dark:text-gray-400">
+               <span>Journal of Power Sources, 2023</span>
+               {/* <span>•</span> */}
+             </p>
+             <p className="text-lg text-gray-500 dark:text-gray-400">
+             The paper adopts an Equivalent Circuit Model (ECM) to construct the relaxation voltage curve for estimating the open-circuit voltage (OCV) of the battery.
+             </p>
+           </div>
+           <div className="space-y-2">
+           <Link href="https://doi.org/10.1016/j.jpowsour.2022.232295">
+             <Button type="submit">Read more</Button>
+             </Link>
+           </div>
+        </div>
+
       </div>
     </div>
       </main>
