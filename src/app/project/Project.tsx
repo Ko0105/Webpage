@@ -76,7 +76,7 @@ export default function MyProject() {
                
                 <div className="text-left text-2xl font-bold ">Estimation of electric vehicle charging status</div>
                   <div className="aspect-[4/3] overflow-hidden rounded-lg w-3/6">
-                  {/* <LineChart className="bject-cover w-full h-full  rounded-lg " /> */}
+                  <LineChart chartData={chartData} className="bject-cover w-full h-full rounded-lg" />
                   </div>
                   <br></br>
                   <div className="max-w-3xl">
