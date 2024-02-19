@@ -108,7 +108,7 @@ export default function MyEducation() {
   )
 }
 
-function BatteryIcon(props) {
+function BatteryIcon(props : any) {
   return (
     <svg
       {...props}
@@ -128,7 +128,7 @@ function BatteryIcon(props) {
   )
 }
 
-function BookIcon(props) {
+function BookIcon(props : any) {
   return (
     <svg
       {...props}
@@ -147,7 +147,7 @@ function BookIcon(props) {
   )
 }
 
-function BookOpenIcon(props) {
+function BookOpenIcon(props : any) {
   return (
     <svg
       {...props}
@@ -168,7 +168,7 @@ function BookOpenIcon(props) {
 }
 
 
-function HomeIcon(props) {
+function HomeIcon(props : any) {
   return (
     <svg
       {...props}
@@ -189,7 +189,7 @@ function HomeIcon(props) {
 }
 
 
-function MailIcon(props) {
+function MailIcon(props : any) {
   return (
     <svg
       {...props}
@@ -210,7 +210,7 @@ function MailIcon(props) {
 }
 
 
-function UserIcon(props) {
+function UserIcon(props : any) {
   return (
     <svg
       {...props}
@@ -230,7 +230,7 @@ function UserIcon(props) {
   )
 }
 
-function ServerIcon(props) {
+function ServerIcon(props : any) {
   return (
     <svg
       {...props}
