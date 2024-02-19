@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useState } from 'react'
 // import { ResponsiveBar } from "@nivo/bar"
 import { ResponsiveLine } from "@nivo/line"
-import chartData from '../../../public/chartData.json'
+import chartData from './chartData.json'
 
 export default function MyProject() {
   const [count, setCount] = useState(0)
