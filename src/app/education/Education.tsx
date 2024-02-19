@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function MyEducation() {
   return (
     // <div className="flex flex-col items-center min-h-screen justify-between space-y-4">
-    <div className="bg-[#e7e8ea] text-gray-900">
+    <div className="bg-[#e7e8ea] text-gray-900 flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center space-y-4">
         <a className="flex items-center justify-center" href="#">
           <BatteryIcon className="h-12 w-12 " />
@@ -44,14 +44,30 @@ export default function MyEducation() {
             </div>
             <div className="space-y-2">
               <div className="space-y-1">
-                <h3 className="text-xl font-bold">Master of Science in Computer Science</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">University of Excellence (2016-2018)</p>
+                <h3 className="text-xl "><span>• </span><span className="font-bold">Phd student</span> of Applied Mechanics</h3>
+                <p className="text-xl text-gray-500 dark:text-gray-400">National Taiwan University (2021-now)</p>
               </div>
               <p className="text-base leading-loose text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Studied advanced algorithms, machine learning, and cloud computing. Completed a thesis on natural
-                language processing with distinction.
+              Studying the state of lithium-ion batteries, machine learning, and GPU computing.
+              </p>
+              <br></br>
+              <div className="space-y-1">
+                <h3 className="text-xl "><span>• </span><span className="font-bold">Master</span> of Hydraulic and Ocean Engineering</h3>
+                <p className="text-xl text-gray-500 dark:text-gray-400">National Cheng Kung University (2019-2021)</p>
+              </div>
+              <p className="text-base leading-loose text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              Studying real-time disaster warning systems, Three.js for cloud-based 3D visualization, and GPU computing.
+              </p>
+              <br></br>
+              <div className="space-y-1">
+                <h3 className="text-xl "><span>• </span><span className="font-bold">Bachelor</span> of Hydraulic and Ocean Engineering</h3>
+                <p className="text-xl text-gray-500 dark:text-gray-400">National Cheng Kung University (2015-2019)</p>
+              </div>
+              <p className="text-base leading-loose text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              Receiving book awards and being admitted to the graduate program with excellent academic performance.
               </p>
             </div>
+            
           </section>
           <section className="space-y-4">
             <div className="space-y-2">
@@ -59,37 +75,33 @@ export default function MyEducation() {
             </div>
             <div className="space-y-2">
               <div className="space-y-1">
-                <h3 className="text-xl font-bold">Senior Software Engineer</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Tech Innovators Inc. (2018-2023)</p>
+                <h3 className="text-2xl "><span className="font-bold">TA</span></h3>
+
+                <p className=" text-xl text-gray-500 dark:text-gray-400"><span className="font-bold">• Elastic mechanics </span> [Sep. 2022 - June. 2023], National Cheng Kung University</p>
+                <p className=" text-xl text-gray-500 dark:text-gray-400"><span className="font-bold">• Engineering statistics </span> [Feb. 2020 - June. 2020], National Cheng Kung University</p>
+                <p className=" text-xl text-gray-500 dark:text-gray-400"><span className="font-bold">• Computational hydraulics</span> [Sep. 2019 - Jan. 2020], National Cheng Kung University</p>
+                <p className=" text-xl text-gray-500 dark:text-gray-400"><span className="font-bold">• Fluid mechanics </span> [Feb. 2019 - June. 2019], National Cheng Kung University</p>
               </div>
-              <p className="text-base leading-loose text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Led the development of a microservices architecture. Mentored junior engineers and collaborated with
-                product managers to deliver high-quality software.
-              </p>
             </div>
           </section>
         </div>
       </main>
-      <footer className="border-t py-4">
-        <div className="container flex items-center justify-between px-4 md:px-6">
-          <ul className="flex gap-4 text-sm font-medium">
-            <li>
-              <Link className="text-gray-900 dark:text-gray-100" href="#">
-                LinkedIn
-              </Link>
-            </li>
-            <li>
-              <Link className="text-gray-900 dark:text-gray-100" href="#">
-                GitHub
-              </Link>
-            </li>
-            <li>
-              <Link className="text-gray-900 dark:text-gray-100" href="#">
-                Twitter
-              </Link>
-            </li>
-          </ul>
-          <div className="text-sm text-gray-500 dark:text-gray-400">© 2024 Your Name. All rights reserved.</div>
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+        <div className="container flex flex-col items-center gap-4 px-4 md:px-6">
+          <nav className="flex items-center space-x-4 text-gray-900 dark:text-gray-100">
+            <Link
+              className="inline-flex items-center space-x-2 text-sm font-medium transition-colors hover:underline"
+              href="#"
+            >
+              <MailIcon className="w-8 h-8" />
+              <span className="text-xl ">
+              Contact
+              </span>
+            </Link>
+          </nav>
+          <div className="flex items-center space-x-2">
+          <p className="text-xs text-gray-500 dark:text-gray-400">© Chi-Jyun Ko | Last updated on 19 February 2024</p>
+          </div>
         </div>
       </footer>
     </div>

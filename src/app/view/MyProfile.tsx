@@ -6,130 +6,145 @@
 import { Button } from "@/components/ui/button"
 // import Project from "./project"
 import Link from "next/link";
-// import {Link} from "react-router-dom";
 
 export default function MyProfile() {
   return (
     <div className="bg-[#e7e8ea] text-gray-900">
-    <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center space-y-4">
-        <a className="flex items-center justify-center" href="#">
-          <BatteryIcon className="h-12 w-12 " />
-        </a>
+      <div className="flex flex-col min-h-[100dvh]">
+        <header className="px-4 lg:px-6 h-14 flex items-center space-y-4">
+          <Link className="flex items-center justify-center" href="#">
+            <BatteryIcon className="h-12 w-12 " />
+          </Link>
+          <nav className="ml-auto flex gap-4 sm:gap-6 ">
+          <Link className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline" href="/">
+          <HomeIcon className="h-10 w-10" />
+              Home
+            </Link>
+          <Link className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline" href="/project">
+          <ServerIcon className="h-10 w-10 " />
+              Projects
+            </Link>
+            <Link className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline" href="/publication">
+            <BookOpenIcon className="h-10 w-10" />
+              Publications
+            </Link>
+            <Link className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline" href="/education">
+            <BookIcon className="h-10 w-10" />
+              Education
+            </Link>
+          </nav>
         
-        <nav className="ml-auto flex gap-4 sm:gap-6 ">
-        <Link className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline" href="/">
-        <HomeIcon className="h-10 w-10" />
-            Home
-          </Link>
-         <Link className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline" href="/project">
-         <ServerIcon className="h-10 w-10 " />
-            Projects
-          </Link>
-          <a className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline" href="/publication">
-          <BookOpenIcon className="h-10 w-10" />
-            Publications
-          </a>
-          <a className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline" href="/education">
-          <BookIcon className="h-10 w-10" />
-            Education
-          </a>
-        </nav>
-      
-      </header>
-      <main className="px-4 py-6 space-y-6 md:space-y-8 lg:py-12 lg:space-y-10">
-        <div className="flex flex-col items-center space-y-2 text-center">
-          <div className="space-y-2">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">Chi-Jyun Ko</h1>
-            <img alt="John Doe" className="h-40 w-40 rounded-full" src="/placeholder.svg" />
-            <p className="max-w-[600px] text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed dark:text-gray-400">
-              I'm a passionate developer who loves creating web experiences.
-            </p>
+        </header>
+        <main className="px-4 py-6 space-y-6 md:space-y-8 lg:py-12 lg:space-y-10">
+          <div className="flex flex-col items-center space-y-2">
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">Chi-Jyun Ko</h1>
+          <h2 className="font-bold racking-tighter sm:text-2xl">Third-year PhD student at National Taiwan University</h2>
+          <div className="max-w-4xl mx-auto my-12 p-8shadow-lg">
+          <div className="grid grid-cols-3 gap-8">
+            <div className="col-span-2 space-y-6">
+              <h2 className="text-2xl font-bold">Research Topic</h2>
+              <div className="text-xl text-justify">
+                Lithium-ion battery, Lithium Dendrite, GPU Computing, and Machine Learning  
+              </div>
+              <h2 className="text-2xl font-bold">Short Biography</h2>
+              <div className="text-xl text-justify">
+              I am a third-year Ph.D. student at the Institute of Applied Mechanics at National Taiwan University. 
+              My research interests focus on analyzing Lithium-ion batteries with Machine Learning and simulating lithium dendrite using C++ and CUDA. 
+              During my Ph.D. studies, I have published <span className="font-bold">four top-tier journals</span>, all as the  <span className="font-bold">first author</span>. 
+              Recently, I collaborated with the Industrial Technology Research Institute (ITRI) to draft a patent based on our research findings. 
+              My recent work focus has been on implementing the battery state detection algorithm we developed into practical devices using development boards.
+              </div>
+            </div>
+            <div>
+          <img
+                alt="PersonalPhotor"
+                // className="rounded-lg shadow-xl"
+                height="250"
+                src="/PersonalPhoto.jpg"
+                style={{
+                  aspectRatio: "230/300",
+                  objectFit: "cover",
+                }}
+                width="200"
+                />
           </div>
-          <div className="mx-auto max-w-sm space-y-2">
-            <form className="flex space-x-2">
-              {/* <Input className="max-w-lg flex-1" placeholder="Enter your email" type="email" /> */}
-              <Button type="submit">Sign Up</Button>
-            </form>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              Sign up to get notified when we launch.
-              <a className="underline underline-offset-2" href="#">
-                Terms & Conditions
-              </a>
-            </p>
-          </div>
+        </div>
+      </div>
         </div>
         <div className="container grid gap-6 px-4 text-center md:px-6 md:grid-cols-2">
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl/relaxed lg:text-4xl/relaxed">
+            <h2 className="text-left text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl/relaxed lg:text-4xl/relaxed">
               Skills
             </h2>
-            <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Let your team focus on shipping features instead of managing infrastructure with automated CI/CD.
-            </p>
+            <div className="font-bold text-left mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <li>Numerical Simulation : C++, CUDA, MPI</li>
+              <li>Mchine Learning : Python, Pytorch, Tensorflow</li>
+              <li>Web development : TypeScript, Three.js</li>
+              <li>Tool : Git, Docker</li>
+              <li>OS : Windows, Linux, MaxOS</li>
+            </div>
           </div>
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl/relaxed lg:text-4xl/relaxed">
-              Experience
+            <h2 className="text-left text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl/relaxed lg:text-4xl/relaxed">
+              Projects
             </h2>
-            <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Let your team focus on shipping features instead of managing infrastructure with automated CI/CD.
-            </p>
+            <div className="font-bold text-left mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <li>Estimation of electric vehicle charging status</li>
+              <li>Device for estimating the state of lithium-ion batteries</li>
+              <Link href="/project">
+              more...            
+              </Link>
+            </div>
           </div>
         </div>
         <div className="container grid gap-6 px-4 text-center md:px-6 md:grid-cols-2">
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl/relaxed lg:text-4xl/relaxed">
-              Education
+            <h2 className="text-left  text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl/relaxed lg:text-4xl/relaxed">
+              Publications
             </h2>
-            <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Let your team focus on shipping features instead of managing infrastructure with automated CI/CD.
-            </p>
+            <div className="font-bold text-justify  mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            <Link href="https://doi.org/10.1016/j.apenergy.2023.122454">
+            <li>Constructing battery impedance spectroscopy using partial current in constant-voltage charging or partial relaxation voltage.</li>
+            </Link>
+            <Link href="https://doi.org/10.1016/j.jpowsour.2023.232779">
+            <li>Influence of inhomogeneity of lithium-ion transport within the anode/electrolyte interface on mossy lithium formation.</li>
+            </Link>
+            
+            <Link href="/publication">
+            more...            
+            </Link>
+            </div>
           </div>
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl/relaxed lg:text-4xl/relaxed">
-              Projects
+            <h2 className="text-left  text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl/relaxed lg:text-4xl/relaxed">
+            Education
             </h2>
-            <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Let your team focus on shipping features instead of managing infrastructure with automated CI/CD.
-            </p>
+            <div className="text-left mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <li><span className="font-bold">Phd student</span> of Applied Mechanics, National Taiwan University</li>
+              <li><span className="font-bold">Master</span> of Hydraulic and Ocean Engineering, National Cheng Kung University</li>
+              <li><span className="font-bold">Bachelor</span> of Hydraulic and Ocean Engineering, National Cheng Kung University</li>
+            </div>
           </div>
         </div>
-        <section className="w-full py-12 md:py-24 lg:py-32 border-t">
-          <div className="container flex flex-col items-center justify-center gap-4 px-4 text-center md:px-6">
-            <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-                Experience the workflow the best frontend teams love.
-              </h2>
-              <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Let your team focus on shipping features instead of managing infrastructure with automated CI/CD.
-              </p>
-            </div>
-            <div className="mx-auto w-full max-w-sm space-y-2">
-              <form className="flex space-x-2">
-                {/* <Input className="max-w-lg flex-1" placeholder="Enter your email" type="email" /> */}
-                <Button type="submit">Sign Up</Button>
-              </form>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                Sign up to get notified when we launch.
-                <a className="underline underline-offset-2" href="#">
-                  Terms & Conditions
-                </a>
-              </p>
-            </div>
-          </div>
-        </section>
+
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Acme Inc. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <a className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </a>
-          <a className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </a>
-        </nav>
+        <div className="container flex flex-col items-center gap-4 px-4 md:px-6">
+          <nav className="flex items-center space-x-4 text-gray-900 dark:text-gray-100">
+            <Link
+              className="inline-flex items-center space-x-2 text-sm font-medium transition-colors hover:underline"
+              href="#"
+            >
+              <MailIcon className="w-8 h-8" />
+              <span className="text-xl ">
+              Contact
+              </span>
+            </Link>
+          </nav>
+          <div className="flex items-center space-x-2">
+            <p className="text-xs text-gray-500 dark:text-gray-400">© Chi-Jyun Ko | Last updated on 19 February 2024</p>
+          </div>
+        </div>
       </footer>
     </div>
    </div>

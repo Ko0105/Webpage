@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function MyEducation() {
   return (
     // <div className="flex flex-col items-center min-h-screen justify-between space-y-4">
-    <div className="bg-[#e7e8ea] text-gray-900">
+    <div className="bg-[#e7e8ea] text-gray-900 flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center space-y-4">
         <a className="flex items-center justify-center" href="#">
           <BatteryIcon className="h-12 w-12 " />
@@ -36,81 +36,114 @@ export default function MyEducation() {
         </nav>
       
       </header>
-      <main className="flex-1">
+      <main className="flex-1 container py-12 space-y-12 px-4 md:px-6">
       <div className="px-4 py-6 md:py-12 lg:py-16">
       <div className="space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight">Publications</h1>
-        <p className="text-gray-500 dark:text-gray-400">Keep up to date with my latest research.</p>
+        <h1 className="text-3xl font-bold tracking-tight">Journal Papers</h1>
+        {/* <p className="text-gray-500 dark:text-gray-400">Keep up to date with my latest research.</p> */}
       </div>
       <div className="divide-y divide-gray-100 dark:divide-gray-800">
         <div className="grid items-start gap-4 py-8">
           <div className="space-y-2">
             <h2 className="text-2xl font-bold tracking-tight">
-              The Impact of Renewable Energy Integration on Smart Grids
+            Using tens of seconds of relaxation voltage to estimate open circuit voltage and state of health of lithium ion batteries
             </h2>
-            <p className="text-gray-500 grid gap-1.5 items-center text-sm dark:text-gray-400">
-              <span>International Journal of Energy and Power Systems</span>
-              <span>•</span>
-              <time >August 15, 2023</time>
+            <p className="text-gray-500 grid gap-1.5 items-center text-lg dark:text-gray-400">
+              <span>Applied Energy, 2024</span>
+              {/* <span>•</span> */}
             </p>
-            <p className="text-gray-500 dark:text-gray-400">
-              This paper explores the challenges and opportunities of integrating renewable energy sources into smart
-              grids and provides insights into the impact on grid stability and reliability.
+            <p className="text-lg text-gray-500 dark:text-gray-400">
+            This paper investigates the estimation of battery Open-Circuit Voltage (OCV) and State of Health (SOH) using partial relaxation voltages.
             </p>
           </div>
           <div className="space-y-2">
-            <Button className="w-full max-w-xs justify-start" variant="outline">
-              Read More
-            </Button>
+          <Link href="https://doi.org/10.1016/j.apenergy.2023.122488">
+            <Button type="submit">Read more</Button>
+            </Link>
           </div>
         </div>
         <div className="grid items-start gap-4 py-8">
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold tracking-tight">
-              Enhancing Data Security in IoT Networks through Blockchain Technology
-            </h2>
-            <p className="text-gray-500 grid gap-1.5 items-center text-sm dark:text-gray-400">
-              <span>Journal of Internet of Things Research</span>
-              <span>•</span>
-              <time >May 20, 2022</time>
-            </p>
-            <p className="text-gray-500 dark:text-gray-400">
-              This paper presents a novel approach to leveraging blockchain technology to secure data transmission and
-              storage in IoT networks, addressing vulnerabilities such as data tampering and unauthorized access.
-            </p>
-          </div>
-          <div className="space-y-2">
-            <Button className="w-full max-w-xs justify-start" variant="outline">
-              Read More
-            </Button>
-          </div>
+          <h2 className="text-2xl font-bold tracking-tight">
+            Constructing battery impedance spectroscopy using partial current in constant-voltage charging or partial relaxation voltage
+             </h2>
+             <p className="text-gray-500 grid gap-1.5 items-center text-lg dark:text-gray-400">
+               <span>Applied Energy, 2024</span>
+               {/* <span>•</span> */}
+             </p>
+             <p className="text-lg text-gray-500 dark:text-gray-400">
+             This paper explores the use of partial relaxation voltage or constant voltage charging current to estimate the electrochemical impedance spectra(EIS) of steady states.
+             </p>
+           </div>
+           <div className="space-y-2">
+           <Link href="https://doi.org/10.1016/j.apenergy.2023.122454">
+             <Button type="submit">Read more</Button>
+             </Link>
+           </div>
         </div>
+
         <div className="grid items-start gap-4 py-8">
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold tracking-tight">
-              Advancements in Edge Computing for Real-time Data Processing
-            </h2>
-            <p className="text-gray-500 grid gap-1.5 items-center text-sm dark:text-gray-400">
-              <span>Journal of Edge Computing</span>
-              <span>•</span>
-              <time >January 10, 2023</time>
-            </p>
-            <p className="text-gray-500 dark:text-gray-400">
-              This paper discusses the latest developments in edge computing architectures and algorithms to enable
-              efficient real-time data processing at the network edge, with applications in IoT, industry 4.0, and
-              autonomous systems.
-            </p>
-          </div>
-          <div className="space-y-2">
-            <Button className="w-full max-w-xs justify-start" variant="outline">
-              Read More
-            </Button>
-          </div>
+          <h2 className="text-2xl font-bold tracking-tight">
+          Differential current in constant-voltage charging mode: A novel tool for state-of-health and state-of-charge estimation of lithium-ion batteries
+             </h2>
+             <p className="text-gray-500 grid gap-1.5 items-center text-lg dark:text-gray-400">
+               <span>Energy, 2024</span>
+               {/* <span>•</span> */}
+             </p>
+             <p className="text-lg text-gray-500 dark:text-gray-400">
+             This paper investigates estimating the charging and health status of batteries using the current curve differentials during constant-voltage charging stages.
+             </p>
+           </div>
+           <div className="space-y-2">
+           <Link href="https://doi.org/10.1016/j.energy.2023.129826 ">
+             <Button type="submit">Read more</Button>
+             </Link>
+           </div>
         </div>
+
+        <div className="grid items-start gap-4 py-8">
+          <div className="space-y-2">
+          <h2 className="text-2xl font-bold tracking-tight">
+            Influence of inhomogeneity of lithium-ion transport within the anode/electrolyte interface on mossy lithium formation.
+          </h2>
+             <p className="text-gray-500 grid gap-1.5 items-center text-lg dark:text-gray-400">
+               <span>Journal of Power Sources, 2023</span>
+               {/* <span>•</span> */}
+             </p>
+             <p className="text-lg text-gray-500 dark:text-gray-400">
+             This paper employs phase-field method to investigate the instability analysis of lithium metal battery interfaces and conducts numerical computations using CUDA.
+             </p>
+           </div>
+           <div className="space-y-2">
+           <Link href="https://doi.org/10.1016/j.jpowsour.2023.232779">
+             <Button type="submit">Read more</Button>
+             </Link>
+           </div>
+        </div>
+
       </div>
     </div>
       </main>
-      <footer className="border-t py-4">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+        <div className="container flex flex-col items-center gap-4 px-4 md:px-6">
+          <nav className="flex items-center space-x-4 text-gray-900 dark:text-gray-100">
+            <Link
+              className="inline-flex items-center space-x-2 text-sm font-medium transition-colors hover:underline"
+              href="#"
+            >
+              <MailIcon className="w-8 h-8" />
+              <span className="text-xl ">
+              Contact
+              </span>
+            </Link>
+          </nav>
+          <div className="flex items-center space-x-2">
+          <p className="text-xs text-gray-500 dark:text-gray-400">© Chi-Jyun Ko | Last updated on 19 February 2024</p>
+          </div>
+        </div>
+      </footer>
+      {/* <footer className="border-t py-4">
         <div className="container flex items-center justify-between px-4 md:px-6">
           <ul className="flex gap-4 text-sm font-medium">
             <li>
@@ -131,7 +164,7 @@ export default function MyEducation() {
           </ul>
           <div className="text-sm text-gray-500 dark:text-gray-400">© 2024 Your Name. All rights reserved.</div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }

@@ -15,7 +15,7 @@ export default function MyProject() {
   const [count, setCount] = useState(0)
   return (
     // <div className="flex flex-col items-center min-h-screen justify-between space-y-4">
-    <div className="bg-[#e7e8ea] text-gray-900">
+    <div className="bg-[#e7e8ea] text-gray-900 flex flex-col min-h-[100dvh]">
       <div className="w-full">
       <header className="px-4 lg:px-6 h-14 flex items-center space-y-4">
         <a className="flex items-center justify-center" href="#">
@@ -42,71 +42,95 @@ export default function MyProject() {
         </nav>
       
       </header>
-        <main className="py-8 md:py-16">
-          <div className="container px-4 md:px-6">
+      {/* <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  A collection of my recent projects showcasing my skills and interests.
+      </p> */}
+        <main className="container py-12 space-y-12 px-4 md:px-6">
+          
+        
             <div className="grid gap-8 lg:gap-12 items-start lg:grid-cols-2">
               <div className="flex flex-col gap-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Projects</h1>
-                <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  A collection of my recent projects showcasing my skills and interests.
-                </p>
-              </div>
-              <div className="flex items-start justify-start">
-                <div className="grid gap-1">
-                  <h2 className="text-xl font-semibold cursor-pointer hover:underline">Project 1</h2>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Description of project 1. It does something really cool.
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Projects</h1>
+                   <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    A collection of my recent projects showcasing my skills and interests.
                   </p>
-                  {/* <GroupedbarChart className="aspect-[4/3]" /> */}
-                  <LineChart className="aspect-[4/3]" />
-                </div>
-              </div>
-            </div>
-            <div className="grid gap-1 md:gap-2 lg:gap-4 xl:gap-8 items-start justify-center">
-              <div>
-                <div className="aspect-[1/1] overflow-hidden rounded-lg w-[100px]">
-                  <img
-                    alt="Project 1"
-                    className="object-cover w-full h-full aspect-[1/1] rounded-lg"
-                    height={200}
-                    src="/placeholder.svg"
-                    width={200}
-                  />
-                </div>
-                <div className="max-w-3xl">
-                  <div>
-                    <div>Project 1</div>
-                    <div>Description of project 1. It does something really cool.</div>
+              <div className="grid gap-1 md:gap-2 lg:gap-4 xl:gap-8 items-start justify-center">
+               
+                <div className="text-left text-2xl font-bold ">Estimation of electric vehicle charging status</div>
+                  <div className="aspect-[4/3] overflow-hidden rounded-lg w-3/6">
+                  <LineChart className="bject-cover w-full h-full  rounded-lg " />
                   </div>
-                  <div>
-                    <div className="grid gap-1">
-                      <h3 className="text-lg font-semibold">Technologies</h3>
-                      <p>Next.js, Tailwind CSS, Vercel</p>
+                  <br></br>
+                  <div className="max-w-3xl">
+                    <div>
+                      <div className="text-left text-xl ">Real-time estimation of dynamic charging status of electric vehicles.</div>
                     </div>
-                    <div className="grid gap-1">
-                      <h3 className="text-lg font-semibold">Impact</h3>
-                      <p>This project helped me understand the power of building with components.</p>
+                    <div>
+                      <br></br>
+                      <div className="grid gap-1">
+                        <h3 className="text-2xl font-bold">Technologies</h3>
+                        <p className="text-xl">Kalman filter, Least squares method, Python</p>
+                      </div>
+                      <div className="grid gap-1">
+                        <h3 className="text-2xl font-semibold">Impact</h3>
+                        <p className="text-xl">This project helped me understand the theory of Kalman filter and demonstrate its practical applications.</p>
+                      </div>
                     </div>
                   </div>
+        
+                  <div className="">
+                    <div className="text-left text-2xl font-bold  ">Device for estimating the state of lithium-ion batteries</div>
+                    <div className="aspect-[4/3] overflow-hidden rounded-lg w-3/6">
+                    <LineChart className="bject-cover w-full h-full  rounded-lg " />
+                    </div>
+                    <br></br>
+                    <div className="max-w-3xl">
+                      <div>
+                        <div className="text-left text-xl ">Construct hardware devices for battery health estimation.</div>
+                      </div>
+                      <div>
+                        <br></br>
+                        <div className="grid gap-1">
+                          <h3 className="text-2xl font-bold">Technologies</h3>
+                          <p className="text-xl">Arduino, Raspberry Pi, Ｃ, Development board</p>
+                        </div>
+                        <div className="grid gap-1">
+                          <h3 className="text-2xl font-semibold">Impact</h3>
+                          <p className="text-xl">This project helped me understand the application of the development board and combine software with hardware.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
+                <div>
+                  
+                  
+                  
+                </div>
+             
               </div>
-            </div>
           </div>
         
         </main>
-        <footer className="flex-shrink-0 bg-gray-100 border-t border-gray-200 py-4 dark:bg-gray-800 dark:border-gray-800 dark:border-t dark:text-gray-50">
-          <div className="container flex items-center justify-between px-4 md:px-6 space-x-4 text-sm">
-            <div className="flex gap-2">
-              <a className="text-gray-500 hover:underline dark:text-gray-400 dark:hover:underline" href="#">
-                Twitter
-              </a>
-              <a className="text-gray-500 hover:underline dark:text-gray-400 dark:hover:underline" href="#">
-                GitHub
-              </a>
-            </div>
-            <div className="text-gray-500 dark:text-gray-400">© 2023 Your Name</div>
+        <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+        <div className="container flex flex-col items-center gap-4 px-4 md:px-6">
+          <nav className="flex items-center space-x-4 text-gray-900 dark:text-gray-100">
+            <Link
+              className="inline-flex items-center space-x-2 text-sm font-medium transition-colors hover:underline"
+              href="#"
+            >
+              <MailIcon className="w-8 h-8" />
+              <span className="text-xl ">
+              Contact
+              </span>
+            </Link>
+          </nav>
+          <div className="flex items-center space-x-2">
+          <p className="text-xs text-gray-500 dark:text-gray-400">© Chi-Jyun Ko | Last updated on 19 February 2024</p>
           </div>
-        </footer>
+        </div>
+      </footer>
       </div>
     </div>
   )
@@ -263,7 +287,7 @@ function LineChart(props) {
       <ResponsiveLine
         data={[
           { id: "Desktop", data: chartData.desktop },
-          { id: "Mobile", data: chartData.mobile }
+          // { id: "Mobile", data: chartData.mobile }
         ]}
         margin={{ top: 10, right: 10, bottom: 40, left: 40 }}
         xScale={{
