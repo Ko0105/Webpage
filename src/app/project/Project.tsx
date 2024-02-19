@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useState } from 'react'
 // import { ResponsiveBar } from "@nivo/bar"
 import { ResponsiveLine } from "@nivo/line"
-import chartData from '../../../public/chartData.json'
+// import chartData from '../../../public/chartData.json'
 
 export default function MyProject() {
   const [count, setCount] = useState(0)
@@ -58,7 +58,7 @@ export default function MyProject() {
                
                 <div className="text-left text-2xl font-bold ">Estimation of electric vehicle charging status</div>
                   <div className="aspect-[4/3] overflow-hidden rounded-lg w-3/6">
-                  <LineChart className="bject-cover w-full h-full  rounded-lg " />
+                  {/* <LineChart className="bject-cover w-full h-full  rounded-lg " /> */}
                   </div>
                   <br></br>
                   <div className="max-w-3xl">
@@ -81,7 +81,7 @@ export default function MyProject() {
                   <div className="">
                     <div className="text-left text-2xl font-bold  ">Device for estimating the state of lithium-ion batteries</div>
                     <div className="aspect-[4/3] overflow-hidden rounded-lg w-3/6">
-                    <LineChart className="bject-cover w-full h-full  rounded-lg " />
+                    {/* <LineChart className="bject-cover w-full h-full  rounded-lg " /> */}
                     </div>
                     <br></br>
                     <div className="max-w-3xl">
