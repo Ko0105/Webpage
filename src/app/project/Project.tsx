@@ -6,13 +6,31 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import Link from "next/link";
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 // import { ResponsiveBar } from "@nivo/bar"
 import { ResponsiveLine } from "@nivo/line"
-import chartData from './chartData.json'
 
 export default function MyProject() {
   const [count, setCount] = useState(0)
+
+  const [chartData, setChartData] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/ChartData.json');
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        setChartData(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     // <div className="flex flex-col items-center min-h-screen justify-between space-y-4">
     <div className="bg-[#e7e8ea] text-gray-900 flex flex-col min-h-[100dvh]">
@@ -81,7 +99,12 @@ export default function MyProject() {
                   <div className="">
                     <div className="text-left text-2xl font-bold  ">Device for estimating the state of lithium-ion batteries</div>
                     <div className="aspect-[4/3] overflow-hidden rounded-lg w-3/6">
-                    <LineChart className="bject-cover w-full h-full  rounded-lg " />
+                    <LineChart chartData={chartData} className="bject-cover w-full h-full rounded-lg" />
+                    {/* <div>
+                      {chartData && (
+                        <pre>{JSON.stringify(chartData, null, 2)}</pre>
+                      )}
+                    </div> */}
                     </div>
                     <br></br>
                     <div className="max-w-3xl">
@@ -280,13 +303,19 @@ function ServerIcon(props : any) {
   )
 }
 
-function LineChart(props : any) {
+function LineChart(props: any) {
+  const { chartData, className } = props; 
+
+  if (!chartData) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div {...props}>
+    <div className={className}>
       <ResponsiveLine
         data={[
           { id: "Desktop", data: chartData.desktop },
-          // { id: "Mobile", data: chartData.mobile }
+          { id: "Mobile", data: chartData.mobile }
         ]}
         margin={{ top: 10, right: 10, bottom: 40, left: 40 }}
         xScale={{
@@ -330,5 +359,5 @@ function LineChart(props : any) {
         role="application"
       />
     </div>
-  )
+  );
 }
