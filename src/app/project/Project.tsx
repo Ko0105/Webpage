@@ -13,16 +13,24 @@ import { ResponsiveLine } from "@nivo/line"
 export default function MyProject() {
   const [count, setCount] = useState(0)
 
-  const [chartData, setChartData] = useState(null);
+  const [chartData1, setChartData1] = useState(null);
+  const [chartData2, setChartData2] = useState(null);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/ChartData.json');
-        if (!response.ok) {
+        const response1 = await fetch('/ChartData.json');
+        const response2 = await fetch('/ChartData.json');
+
+        if (!response1.ok || !response2.ok) {
           throw new Error('Failed to fetch data');
         }
-        const data = await response.json();
-        setChartData(data);
+
+        const data1 = await response1.json();
+        const data2 = await response2.json();
+
+        setChartData1(data1);
+        setChartData2(data2);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -76,7 +84,7 @@ export default function MyProject() {
                
                 <div className="text-left text-2xl font-bold ">Estimation of electric vehicle charging status</div>
                   <div className="aspect-[4/3] overflow-hidden rounded-lg w-3/6">
-                  <LineChart chartData={chartData} className="bject-cover w-full h-full rounded-lg" />
+                  <LineChart chartData={chartData1} className="bject-cover w-full h-full rounded-lg" />
                   </div>
                   <br></br>
                   <div className="max-w-3xl">
@@ -99,7 +107,7 @@ export default function MyProject() {
                   <div className="">
                     <div className="text-left text-2xl font-bold  ">Device for estimating the state of lithium-ion batteries</div>
                     <div className="aspect-[4/3] overflow-hidden rounded-lg w-3/6">
-                    <LineChart chartData={chartData} className="bject-cover w-full h-full rounded-lg" />
+                    <LineChart chartData={chartData2} className="bject-cover w-full h-full rounded-lg" />
                     {/* <div>
                       {chartData && (
                         <pre>{JSON.stringify(chartData, null, 2)}</pre>
