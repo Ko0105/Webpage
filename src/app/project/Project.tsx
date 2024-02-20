@@ -180,7 +180,10 @@ export default function MyProject() {
                   
                   <div className="text-left text-2xl font-bold  "> • Analysis of lithium metal battery interfaces</div>
                   <div className="aspect-[3/2] overflow-hidden rounded-2xl w-3/6  mx-auto ">
-                  <LineChart chartData={chartData1} className="bject-cover w-full h-full rounded-lg" />
+                  <video controls>
+                     <source src="/PhaseField.mov" type="audio/mp4" />
+                    Your browser does not support the audio tag.
+                  </video>
     
                   </div>
                   <br></br>
@@ -216,8 +219,7 @@ export default function MyProject() {
                     Your browser does not support the audio tag.
                   </video>
                   </div>
-                  <br></br>
-                  <div className="">
+                  <br></br>                  <div className="">
                   
                     <div className="text-justify text-xl  ml-4">
                       <li>Developing a two-phase flow numerical computing model using <span className="font-bold">CUDA</span> to increase program efficiency by over <span className="font-bold">100%.</span></li>
