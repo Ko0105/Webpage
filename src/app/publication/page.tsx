@@ -1,13 +1,5 @@
-import Image from "next/image";
-import Publication from './Publication'
+import Publication from "@/view/publication/Publication";
 
 export default function Home() {
-  return (
-
-    <>
-    <Publication />
-    </>
-    
-  )
+  return <Publication />;
 }
-

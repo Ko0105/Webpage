@@ -1,13 +1,5 @@
-import Image from "next/image";
-import MyProfile from './view/MyProfile'
+import MyProfile from "@/view/home/MyProfile";
 
 export default function Home() {
-  return (
-
-    <>
-    <MyProfile />
-    </>
-    
-  )
+  return <MyProfile />;
 }
-
