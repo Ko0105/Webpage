@@ -9,29 +9,34 @@ import Link from "next/link";
 import { useEffect, useState } from 'react'
 // import { ResponsiveBar } from "@nivo/bar"
 import { ResponsiveLine } from "@nivo/line"
-import { ResponsiveBump } from '@nivo/bump'
+// import { ResponsiveBump } from '@nivo/bump'
 
 export default function MyProject() {
   const [count, setCount] = useState(0)
 
   const [chartData1, setChartData1] = useState(null);
   const [chartData2, setChartData2] = useState(null);
+  const [chartData3, setChartData3] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response1 = await fetch('/OCV_ECM.json');
-        const response2 = await fetch('/ISC_Data.json');
-
-        if (!response1.ok || !response2.ok) {
+        const response1 = await fetch('/ISC_Data.json');
+        const response2 = await fetch('/EIS_Data.json');
+        const response3 = await fetch('/OCV_Data.json');
+        
+        if (!response1.ok || !response2.ok || !response3.ok) {
           throw new Error('Failed to fetch data');
         }
 
         const data1 = await response1.json();
         const data2 = await response2.json();
+        const data3 = await response3.json();
 
         setChartData1(data1);
         setChartData2(data2);
+        setChartData3(data3);
+
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -84,7 +89,7 @@ export default function MyProject() {
 
                 <div className="text-left text-2xl font-bold "> • Real-time dynamic state estimation of electric vehicles</div>
                   <div className="aspect-[3/2] overflow-hidden rounded-2xl w-3/6  mx-auto ">
-                  <BumpChart chartData={chartData2} className="bject-cover w-full h-full rounded-lg" />
+                  <Project1_Chart chartData={chartData1} className="bject-cover w-full h-full rounded-lg" />
                   </div>
                   
                   <br></br>
@@ -113,7 +118,8 @@ export default function MyProject() {
                   
                     <div className="text-left text-2xl font-bold  "> • Device for estimating the state of lithium-ion batteries</div>
                     <div className="aspect-[3/2] overflow-hidden rounded-2xl w-3/6  mx-auto ">
-                    {/* <LineChart chartData={chartData1} className="bject-cover w-full h-full rounded-lg" /> */}
+                     <Project2_Chart chartData={chartData2} className="bject-cover w-full h-full rounded-lg" />
+             
                     {/* <div>
                       {chartData1 && (
                         <pre>{JSON.stringify(chartData1, null, 2)}</pre>
@@ -147,7 +153,7 @@ export default function MyProject() {
                   
                   <div className="text-left text-2xl font-bold  "> • Application of Equivalent Circuit Model (ECM) for battery state analysis</div>
                   <div className="aspect-[3/2] overflow-hidden rounded-2xl w-3/6  mx-auto ">
-                  <LineChart chartData={chartData1} className="bject-cover w-full h-full rounded-lg" />
+                  <Project3_Chart chartData={chartData3} className="bject-cover w-full h-full rounded-lg" />
     
                   </div>
                   <br></br>
@@ -422,7 +428,7 @@ function ServerIcon(props : any) {
   )
 }
 
-function LineChart(props: any) {
+function Project1_Chart(props: any) {
   const { chartData, className } = props; 
 
   if (!chartData) {
@@ -503,7 +509,7 @@ function LineChart(props: any) {
 }
 
 
-function BumpChart(props: any) {
+function Project3_Chart(props: any) {
   const { chartData, className } = props; 
 
   if (!chartData) {
@@ -520,7 +526,7 @@ function BumpChart(props: any) {
                   max:160 }}
         yScale={{
             type: 'linear',
-            min: 3.0,
+            min: "auto",
             max: "auto",
             // stacked: true,
             reverse: false
@@ -554,10 +560,10 @@ function BumpChart(props: any) {
         useMesh={true}
         legends={[
             {
-                anchor: 'bottom-right',
+                anchor: 'top-right',
                 direction: 'column',
                 justify: false,
-                translateX: 100,
+                translateX: 10,
                 translateY: 0,
                 itemsSpacing: 0,
                 itemDirection: 'left-to-right',
@@ -565,6 +571,87 @@ function BumpChart(props: any) {
                 itemHeight: 20,
                 itemOpacity: 0.75,
                 symbolSize: 12,
+                symbolShape: 'circle',
+                symbolBorderColor: 'rgba(0, 0, 0, .5)',
+                effects: [
+                    {
+                        on: 'hover',
+                        style: {
+                            itemBackground: 'rgba(0, 0, 0, .03)',
+                            itemOpacity: 1
+                        }
+                    }
+                ]
+            }
+        ]}
+    />
+    </div>
+  );
+}
+
+function Project2_Chart(props: any) {
+  const { chartData, className } = props; 
+
+  if (!chartData) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div className={className}>
+        <ResponsiveLine
+        data={chartData}
+        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        xScale={{ type: 'linear',
+                  min:0.023,
+                  max:0.042}}
+        yScale={{
+            type: 'linear',
+            min: "auto",
+            max: "auto",
+            // stacked: true,
+            reverse: false
+        }}
+        yFormat=" >-.2f"
+        curve="basis"
+        axisTop={null}
+        axisRight={null}
+        axisBottom={{
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: 'Re',
+            legendOffset: 36,
+            legendPosition: 'middle',
+            truncateTickAt: 0
+        }}
+        axisLeft={{
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: 'Im',
+            legendOffset: -40,
+            legendPosition: 'middle',
+            truncateTickAt: 0
+        }}
+        pointSize={10}
+        pointColor={{ theme: 'background' }}
+        pointBorderWidth={2}
+        pointBorderColor={{ from: 'serieColor' }}
+        pointLabelYOffset={-12}
+        useMesh={true}
+        legends={[
+            {
+                anchor: 'bottom-right',
+                direction: 'column',
+                justify: false,
+                translateX: 20,
+                translateY: 0,
+                itemsSpacing: 0,
+                itemDirection: 'left-to-right',
+                itemWidth: 170,
+                itemHeight: 20,
+                itemOpacity: 0.75,
+                symbolSize: 10,
                 symbolShape: 'circle',
                 symbolBorderColor: 'rgba(0, 0, 0, .5)',
                 effects: [
