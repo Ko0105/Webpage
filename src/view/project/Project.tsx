@@ -2,13 +2,13 @@
 //  * v0 by Vercel.
 //  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
 //  * @see https://v0.dev/t/1fvFzyMTtOO
-import { ResponsiveLine } from "@nivo/line";
-import type { EIS_Data, ISC_Data, OCV_Data } from "@/methods/project";
+import { ResponsiveLine, Serie } from "@nivo/line";
+import type { TEIS_Data, TISC_Data, TOCV_Data } from "@/methods/project";
 
 type MyProjectProps = {
-  iscData: ISC_Data;
-  eisData: EIS_Data;
-  ocvData: OCV_Data;
+  iscData: TISC_Data[];
+  eisData: TEIS_Data[];
+  ocvData: TOCV_Data[];
 };
 
 export default function MyProject(props: MyProjectProps) {
@@ -297,7 +297,13 @@ export default function MyProject(props: MyProjectProps) {
   );
 }
 
-function Project1_Chart(props: any) {
+type TProject1Chart = {
+  chartData: TISC_Data[];
+  className?: string;
+};
+
+// TODO: 拉出去
+function Project1_Chart(props: TProject1Chart) {
   const { chartData, className } = props;
 
   if (!chartData) {
@@ -307,7 +313,7 @@ function Project1_Chart(props: any) {
   return (
     <div className={className}>
       <ResponsiveLine
-        data={chartData}
+        data={chartData satisfies Serie[]}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
         xScale={{ type: "linear", min: 0.0, max: "auto" }}
         yScale={{

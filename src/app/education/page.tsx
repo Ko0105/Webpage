@@ -1,4 +1,4 @@
-import Education from "@/view/publication/Publication";
+import Education from "@/view/education/Education";
 
 export default function Home() {
   return <Education />;

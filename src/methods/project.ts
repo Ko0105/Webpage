@@ -1,17 +1,17 @@
-export type EIS_Data = {
+export type TEIS_Data = {
   id: "EIS curve";
-  color: "hsl(35, 96%, 73%)";
+  color: `hsl${number}, ${number}%, ${number}%)`;
   data: { x: string; y: string }[];
 };
 
-export type ISC_Data = {
-  id: "Normal";
-  color: "hsl(277, 70%, 50%)";
+export type TISC_Data = {
+  id: "Normal" | "ISC case1" | "ISC case2";
+  color: `hsl${number}, ${number}%, ${number}%)`;
   data: { x: string; y: string }[];
 };
 
-export type OCV_Data = {
-  id: "Model Voltage";
-  color: "hsl(194, 96%, 34%)";
+export type TOCV_Data = {
+  id: "Model Voltage" | "Measured Voltage";
+  color: `hsl${number}, ${number}%, ${number}%)`;
   data: { x: string; y: string }[];
 };
