@@ -626,18 +626,11 @@ video {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
 .ml-4 {
   margin-left: 1rem;
 }
 .ml-auto {
   margin-left: auto;
-}
-.ml-2 {
-  margin-left: 0.5rem;
 }
 .flex {
   display: flex;
@@ -921,9 +914,6 @@ video {
 }
 .font-semibold {
   font-weight: 600;
-}
-.capitalize {
-  text-transform: capitalize;
 }
 .leading-loose {
   line-height: 2;

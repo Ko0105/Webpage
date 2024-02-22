@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useEffect, useState } from 'react'
 // import { ResponsiveBar } from "@nivo/bar"
 import { ResponsiveLine } from "@nivo/line"
+import { ResponsiveBump } from '@nivo/bump'
 
 export default function MyProject() {
   const [count, setCount] = useState(0)
@@ -19,8 +20,8 @@ export default function MyProject() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response1 = await fetch('/ChartData.json');
-        const response2 = await fetch('/ChartData.json');
+        const response1 = await fetch('/OCV_ECM.json');
+        const response2 = await fetch('/ISC_Data.json');
 
         if (!response1.ok || !response2.ok) {
           throw new Error('Failed to fetch data');
@@ -83,7 +84,7 @@ export default function MyProject() {
 
                 <div className="text-left text-2xl font-bold "> • Real-time dynamic state estimation of electric vehicles</div>
                   <div className="aspect-[3/2] overflow-hidden rounded-2xl w-3/6  mx-auto ">
-                  <LineChart chartData={chartData1} className="bject-cover w-full h-full rounded-lg" />
+                  <BumpChart chartData={chartData2} className="bject-cover w-full h-full rounded-lg" />
                   </div>
                   
                   <br></br>
@@ -112,10 +113,10 @@ export default function MyProject() {
                   
                     <div className="text-left text-2xl font-bold  "> • Device for estimating the state of lithium-ion batteries</div>
                     <div className="aspect-[3/2] overflow-hidden rounded-2xl w-3/6  mx-auto ">
-                    <LineChart chartData={chartData1} className="bject-cover w-full h-full rounded-lg" />
+                    {/* <LineChart chartData={chartData1} className="bject-cover w-full h-full rounded-lg" /> */}
                     {/* <div>
-                      {chartData && (
-                        <pre>{JSON.stringify(chartData, null, 2)}</pre>
+                      {chartData1 && (
+                        <pre>{JSON.stringify(chartData1, null, 2)}</pre>
                       )}
                     </div> */}
       
@@ -430,52 +431,154 @@ function LineChart(props: any) {
 
   return (
     <div className={className}>
-      <ResponsiveLine
-        data={[
-          { id: "Desktop", data: chartData.desktop },
-          { id: "Mobile", data: chartData.mobile }
-        ]}
-        margin={{ top: 10, right: 10, bottom: 40, left: 40 }}
-        xScale={{
-          type: "point",
-        }}
+        <ResponsiveLine
+        data={chartData}
+        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        xScale={{ type: 'linear',
+                  min:0.0,
+                  max:"auto"}}
         yScale={{
-          type: "linear",
+            type: 'linear',
+            min: "auto",
+            max: "auto",
+            // stacked: true,
+            reverse: false
         }}
+        yFormat=" >-.2f"
         axisTop={null}
         axisRight={null}
         axisBottom={{
-          tickSize: 0,
-          tickPadding: 16,
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: 'Time (min)',
+            legendOffset: 36,
+            legendPosition: 'middle',
+            truncateTickAt: 0
         }}
         axisLeft={{
-          tickSize: 0,
-          tickValues: 5,
-          tickPadding: 16,
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: 'Voltage',
+            legendOffset: -40,
+            legendPosition: 'middle',
+            truncateTickAt: 0
         }}
-        colors={["#2563eb", "#e11d48"]}
         pointSize={6}
+        pointColor={{ theme: 'background' }}
+        pointBorderWidth={2}
+        pointBorderColor={{ from: 'serieColor' }}
+        pointLabelYOffset={-12}
         useMesh={true}
-        gridYValues={6}
-        theme={{
-          tooltip: {
-            chip: {
-              borderRadius: "9999px",
-            },
-            container: {
-              fontSize: "12px",
-              textTransform: "capitalize",
-              borderRadius: "6px",
-            },
-          },
-          grid: {
-            line: {
-              stroke: "#f3f4f6",
-            },
-          },
+        legends={[
+            {
+                anchor: 'top-right',
+                direction: 'column',
+                justify: false,
+                translateX: 20,
+                translateY: 0,
+                itemsSpacing: 0,
+                itemDirection: 'left-to-right',
+                itemWidth: 170,
+                itemHeight: 20,
+                itemOpacity: 0.75,
+                symbolSize: 10,
+                symbolShape: 'circle',
+                symbolBorderColor: 'rgba(0, 0, 0, .5)',
+                effects: [
+                    {
+                        on: 'hover',
+                        style: {
+                            itemBackground: 'rgba(0, 0, 0, .03)',
+                            itemOpacity: 1
+                        }
+                    }
+                ]
+            }
+        ]}
+    />
+    </div>
+  );
+}
+
+
+function BumpChart(props: any) {
+  const { chartData, className } = props; 
+
+  if (!chartData) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div className={className}>
+      <ResponsiveLine
+        data={chartData}
+        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        xScale={{ type: 'linear',
+                  min:0.0,
+                  max:160 }}
+        yScale={{
+            type: 'linear',
+            min: 3.0,
+            max: "auto",
+            // stacked: true,
+            reverse: false
         }}
-        role="application"
-      />
+        yFormat=" >-.2f"
+        axisTop={null}
+        axisRight={null}
+        axisBottom={{
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: 'Time (min)',
+            legendOffset: 36,
+            legendPosition: 'middle',
+            truncateTickAt: 0
+        }}
+        axisLeft={{
+            tickSize: 5,
+            tickPadding: 5,
+            tickRotation: 0,
+            legend: 'Voltage',
+            legendOffset: -40,
+            legendPosition: 'middle',
+            truncateTickAt: 0
+        }}
+        pointSize={6}
+        pointColor={{ theme: 'background' }}
+        pointBorderWidth={2}
+        pointBorderColor={{ from: 'serieColor' }}
+        pointLabelYOffset={-12}
+        useMesh={true}
+        legends={[
+            {
+                anchor: 'bottom-right',
+                direction: 'column',
+                justify: false,
+                translateX: 100,
+                translateY: 0,
+                itemsSpacing: 0,
+                itemDirection: 'left-to-right',
+                itemWidth: 80,
+                itemHeight: 20,
+                itemOpacity: 0.75,
+                symbolSize: 12,
+                symbolShape: 'circle',
+                symbolBorderColor: 'rgba(0, 0, 0, .5)',
+                effects: [
+                    {
+                        on: 'hover',
+                        style: {
+                            itemBackground: 'rgba(0, 0, 0, .03)',
+                            itemOpacity: 1
+                        }
+                    }
+                ]
+            }
+        ]}
+    />
     </div>
   );
 }
