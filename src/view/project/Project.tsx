@@ -54,7 +54,8 @@ export default function MyProject(props: MyProjectProps) {
                   estimating the dynamic charging status of electric vehicles in
                   real-world scenarios.
                 </li>
-                <li>
+                
+                <li className="pt-4">
                   Using the{" "}
                   <span className="font-bold">Dynamic Time Warping (DTW)</span>{" "}
                   algorithm to synchronize voltage and current measurements in
@@ -110,7 +111,7 @@ export default function MyProject(props: MyProjectProps) {
                   lithium-ion battery classification.
                 </span>
               </li>
-              <li>
+              <li className="pt-4">
                 Combining Arduino with Raspberry Pi to estimate the health
                 status of lithium-ion batteries using 3 minutes of partial
                 discharge curve data.
@@ -163,14 +164,14 @@ export default function MyProject(props: MyProjectProps) {
                 <span className="font-bold">internal short circuits</span>{" "}
                 under dynamic discharge conditions using ECM parameters.
               </li>
-              <li>
+              <li className="pt-4">
                 Constructing an algorithm using the ECM to estimate battery
                 OCV, resulting in a significant{" "}
                 <span className="font-bold">
                   reduction of 97% in OCV acquisition time.
                 </span>
               </li>
-              <li>
+              <li className="pt-4">
                 Applying the developed algorithm to real electric vehicle
                 data, achieving an accurate estimation of the electric
                 vehicle charging status with an{" "}
@@ -222,7 +223,7 @@ export default function MyProject(props: MyProjectProps) {
                 internal structure of lithium metal batteries for{" "}
                 <span className="font-bold">GPU computing.</span>
               </li>
-              <li>
+              <li className="pt-4">
                 Analyzing the mechanisms causing{" "}
                 <span className="font-bold">
                   instability on the surface
@@ -278,7 +279,7 @@ export default function MyProject(props: MyProjectProps) {
                 <span className="font-bold">CUDA</span> to increase program
                 efficiency by over <span className="font-bold">100%.</span>
               </li>
-              <li>
+              <li className="pt-4">
                 Combining{" "}
                 <span className="font-bold">
                   Message passing interface (MPI)
@@ -287,7 +288,7 @@ export default function MyProject(props: MyProjectProps) {
                 computation to remove memory limitations imposed by a single
                 GPU.
               </li>
-              <li>
+              <li className="pt-4">
                 Using <span className="font-bold">Three.js</span> to
                 construct the program on cloud computing and design the
                 interface, enabling the model to be applied in real-world
