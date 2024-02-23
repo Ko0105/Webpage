@@ -13,34 +13,35 @@ export default function MyProfile() {
         <h2 className="font-bold racking-tighter sm:text-2xl">
           Third-year PhD student at National Taiwan University
         </h2>
-        <div className="max-w-4xl mx-auto my-12 p-8shadow-lg">
+        <div className="max-w-4xl mx-auto my-12 p-8 ">
+      
           <div className="grid grid-cols-3 gap-8">
             <div className="col-span-2 space-y-6">
               <h2 className="text-2xl font-bold">Research Topic</h2>
-              <div className="text-xl text-justify">
-                Lithium-ion battery, Lithium Dendrite, GPU Computing, and
-                Machine Learning
-              </div>
+                <div className="text-xl text-justify">
+                  Lithium-ion battery, Lithium Dendrite, GPU Computing, and
+                  Machine Learning
+                </div>
               <h2 className="text-2xl font-bold">Short Biography</h2>
-              <div className="text-xl text-justify">
-                I am a third-year Ph.D. student at the Institute of Applied
-                Mechanics at National Taiwan University. My research interests
-                focus on analyzing Lithium-ion batteries with Machine Learning
-                and simulating lithium dendrite using C++ and CUDA. During my
-                Ph.D. studies, I have published{" "}
-                <span className="font-bold">four top-tier journals</span>, all
-                as the <span className="font-bold">first author</span>.
-                Recently, I collaborated with the Industrial Technology Research
-                Institute (ITRI) to draft a patent based on our research
-                findings. My recent work focus has been on implementing the
-                battery state detection algorithm we developed into practical
-                devices using development boards.
-              </div>
-            </div>
-            <div>
+                <div className="text-xl text-justify">
+                  I am a third-year Ph.D. student at the Institute of Applied
+                  Mechanics at National Taiwan University. My research interests
+                  focus on analyzing Lithium-ion batteries with Machine Learning
+                  and simulating lithium dendrite using C++ and CUDA. During my
+                  Ph.D. studies, I have published{" "}
+                  <span className="font-bold">four top-tier journals</span>, all
+                  as the <span className="font-bold">first author</span>.
+                  Recently, I collaborated with the Industrial Technology Research
+                  Institute (ITRI) to draft a patent based on our research
+                  findings. My recent work focus has been on implementing the
+                  battery state detection algorithm we developed into practical
+                  devices using development boards.
+                </div>
+             </div>
+            <div> 
               <img
                 alt="PersonalPhotor"
-                // className="rounded-lg shadow-xl"
+                className="rounded-2xl shadow-xl border-solid border-4 border-gray-600"
                 height="250"
                 src="/PersonalPhoto.jpg"
                 style={{
@@ -49,10 +50,16 @@ export default function MyProfile() {
                 }}
                 width="200"
               />
+   
             </div>
           </div>
         </div>
+       
+      
+
       </div>
+
+      
       <div className="container grid gap-6 px-4 text-center md:px-6 md:grid-cols-2">
         <div className="space-y-2">
           <h2 className="text-left text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl/relaxed lg:text-4xl/relaxed">
@@ -60,7 +67,7 @@ export default function MyProfile() {
           </h2>
           <div className="font-bold text-left mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
             <li>Numerical Simulation : C++, CUDA, MPI</li>
-            <li>Mchine Learning : Python, Pytorch, Tensorflow</li>
+            <li>Machine Learning : Python, Pytorch, Tensorflow</li>
             <li>Web development : TypeScript, Three.js</li>
             <li>Tool : Git, Docker</li>
             <li>OS : Windows, Linux, MaxOS</li>
