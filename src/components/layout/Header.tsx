@@ -1,47 +1,42 @@
 "use client";
 import Link from "next/link";
-import { Home } from 'lucide-react';
-import { BookOpenText } from 'lucide-react';
-import { Book } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { BatteryFull } from 'lucide-react';
+import { Home } from "lucide-react";
+import { BookOpenText } from "lucide-react";
+import { Book } from "lucide-react";
+import { Database } from "lucide-react";
+import { BatteryFull } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
+const navList = [
+  { name: "Home", href: "/" },
+  { name: "Projects", href: "/project" },
+  { name: "Publications", href: "/publication" },
+  { name: "Education", href: "/education" },
+];
 const Header = () => {
-  return (
-    <header className="px-4 lg:px-6 h-14 flex items-center space-y-4">
-      <Link className="flex items-center justify-center" href="#">
-        <BatteryFull strokeWidth={3} className="h-12 w-12 " />
+  const pathname = usePathname();
 
+  return (
+    <header className="justify-between px-4 flex items-center md:px-12 lg:px-20 bg-[#F8FAFC] shadow-md shadow-gray-200 sticky top-0 z-10">
+      <Link className="flex items-center justify-center" href="/">
+        <BatteryFull strokeWidth={3} className="h-12 w-12" />
       </Link>
-      <nav className="ml-auto flex gap-4 sm:gap-6 ">
-        <Link
-          className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline"
-          href="/"
-        >
-          <Home strokeWidth={3} className="h-12 w-12 "  />
-          Home
-        </Link>
-        <Link
-          className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline"
-          href="/project"
-        >
-          <Database strokeWidth={3} className="h-12 w-12 " />
-          Projects
-        </Link>
-        <Link
-          className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline"
-          href="/publication"
-        >
-          <BookOpenText strokeWidth={3} className="h-12 w-12" />
-          Publications
-        </Link>
-        <Link
-          className="inline-flex items-center space-x-2 text-xl font-medium transition-colors hover:underline"
-          href="/education"
-        >
-          <Book strokeWidth={3} className="h-12 w-12" />
-          Education
-        </Link>
+      <nav className="flex items-center ml-auto">
+        {navList.map((item) => {
+          return (
+            <Link
+              key={item.name}
+              className={cn(
+                "py-4 md:py-6 mx-1 px-4 text-center transition-colors duration-300 ease-in-out hover:underline text-gray-400 hover:text-gray-500",
+                { "text-gray-900": item.href === pathname },
+              )}
+              href={item.href}
+            >
+              {item.name}
+            </Link>
+          );
+        })}
       </nav>
     </header>
   );
