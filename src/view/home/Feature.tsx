@@ -58,9 +58,8 @@ const Feature = () => {
             <div className="text-xl leading-8 indent-8 font-extralight flex flex-col [list-style-type:square] space-y-1 text-left">
               <Link href="https://doi.org/10.1016/j.apenergy.2023.122454">
                 <li>
-                  Constructing battery impedance spectroscopy using partial
-                  current in constant-voltage charging or partial relaxation
-                  voltage.
+                Using tens of seconds of relaxation voltage to estimate open 
+                circuit voltage and state of health of lithium ion batteries.
                 </li>
               </Link>
               <Link href="https://doi.org/10.1016/j.jpowsour.2023.232779">

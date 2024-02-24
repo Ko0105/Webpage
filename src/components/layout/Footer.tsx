@@ -8,8 +8,9 @@ const Footer = () => {
         <nav className="flex items-center space-x-4 text-gray-900 dark:text-gray-100">
           <Link
             className="inline-flex items-center space-x-2 text-sm font-medium transition-colors hover:underline"
-            href="#"
+            href="mailto: d10543004@ntu.edu.tw"
           >
+            
             <Mail strokeWidth={3} className="w-10 h-10" />
             <span className="text-xl ">Contact</span>
           </Link>
