@@ -18,7 +18,7 @@ const Dendrite = (props: any) => {
       <div className="flex flex-col overflow-hidden rounded-2xl mx-auto">
         {/* <RaspberryPlot chartData={data} className="w-full h-[320px]" />
         <div className="aspect-[3/2] overflow-hidden rounded-2xl mx-auto "> */}
-        <video controls className="w-full h-[320px]">
+        <video controls className="w-full h-[320px] flex-rwo-reverse">
             <source src="/DebrisFlow.mp4" type="audio/mp4" />
             Your browser does not support the audio tag.
         </video>

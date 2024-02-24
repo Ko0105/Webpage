@@ -11,7 +11,7 @@ const Raspberry = (props: RaspberryProps) => {
   return (
   <div>
   <h2 className="text-left text-3xl font-bold pb-4 bg-clip-text text-transparent bg-gradient-to-l from-teal-600 to-teal-700">
-    Real-time dynamic state estimation of electric vehicles
+  Device for estimating the state of lithium-ion batteries
   </h2>
   <div className="px-4 text-center md:px-6 flex flex-col lg:flex-row items-center">
     <div className="w-full lg:w-1/2">
