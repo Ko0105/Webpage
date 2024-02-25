@@ -10,7 +10,7 @@ export default function MyEducation() {
   return (
     <div className="container px-8 md:px-16 lg:px-24 flex flex-col space-y-2 pb-6">
       <Edu />
-      {/* <Experience /> */}
+      <Experience />
       {/* <Timeline />  */}
     </div>
   );

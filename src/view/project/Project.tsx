@@ -6,6 +6,7 @@ import Raspberry from "./Raspberry";
 import OCV from "./OCV";
 import Dendrite from "./Dendrite";
 import Debris from "./Debris";
+import Battery_ML from "./Battery_ML";
 
 type MyProjectProps = {
   iscData: TISC_Data[];
@@ -35,9 +36,14 @@ export default function MyProject(props: MyProjectProps) {
           <section className={"py-12"}>
             <Vehicle data={chartData1} />
           </section>
+          
 
           <section className={"py-12"}>
             <Raspberry data={chartData2} />
+          </section>
+
+          <section className={"py-12"}>
+            <Battery_ML />
           </section>
 
           <section className={"py-12"}>
