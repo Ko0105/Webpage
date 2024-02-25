@@ -37,25 +37,22 @@ export default function MyProject(props: MyProjectProps) {
           </section>
 
           <section className={"py-12"}>
-          <Raspberry data={chartData2} />
+            <Raspberry data={chartData2} />
           </section>
 
           <section className={"py-12"}>
-          <OCV data={chartData3} />
+            <OCV data={chartData3} />
           </section>
 
           <section className={"py-12"}>
-          <Dendrite />
+            <Dendrite />
           </section>
 
           <section className={"py-12"}>
-          <Debris />
+            <Debris />
           </section>
-          
         </div>
       </div>
     </>
   );
 }
-
-
