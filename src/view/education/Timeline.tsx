@@ -61,6 +61,7 @@ const Timeline = () => {
           built on top of Tailwind CSS.
         </p>
       </li>
+      
     </ol>
   );
 };
