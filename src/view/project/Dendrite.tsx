@@ -51,6 +51,14 @@ const Dendrite = (props: any) => {
             <span className="font-bold">instability on the surface</span>{" "}
             of lithium metal batteries.
         </li>
+        <li className="pt-4">
+            Combining{" "}
+            <span className="font-bold">
+            Message passing interface (MPI)
+            </span>{" "}
+            with CUDA for <span className="font-bold">multi-GPU</span>{" "}
+            computation to increase computational efficiency and reduce memory constraints
+        </li>
       </div>
     </div>
   </div>

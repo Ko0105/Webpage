@@ -31,9 +31,6 @@ const Dendrite = (props: any) => {
           <Badge className="hover:bg-gray-100/80 bg-gray-100 text-teal-600 shadow-md px-4 py-1 text-base">
           CUDA
           </Badge>
-          <Badge className="hover:bg-gray-100/80 bg-gray-100 text-teal-600 shadow-md px-4 py-1 text-base">
-          MPI
-          </Badge>
 
           <Badge className="hover:bg-gray-100/80 bg-gray-100 text-teal-600 shadow-md px-4 py-1 text-base">
           Three.js
@@ -53,19 +50,15 @@ const Dendrite = (props: any) => {
             <span className="font-bold">CUDA</span> to increase program
             efficiency by over <span className="font-bold">100%.</span>
         </li>
-        <li className="pt-4">
-            Combining{" "}
-            <span className="font-bold">
-            Message passing interface (MPI)
-            </span>{" "}
-            with CUDA for <span className="font-bold">multi-GPU</span>{" "}
-            computation to remove memory limitations imposed by a single
-            GPU.
-        </li>
+
         <li className="pt-4">
             Using <span className="font-bold">Three.js</span> to construct
             the program on cloud computing and design the interface,
             enabling the model to be applied in real-world scenarios.
+        </li>
+        <li className="pt-4">
+            
+          Constructing an efficient computational program for local execution using <span className="font-bold">OpenGL and CUDA</span>.
         </li>
       </div>
     </div>

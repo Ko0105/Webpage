@@ -29,6 +29,9 @@ const Vehicle = (props: VehicleProps) => {
               <Badge className="hover:bg-gray-100/80 bg-gray-100 text-teal-600 shadow-md px-4 py-1 text-base">
                 Python
               </Badge>
+              <Badge className="hover:bg-gray-100/80 bg-gray-100 text-teal-600 shadow-md px-4 py-1 text-base">
+                PyQt
+              </Badge>
             </div>
           </div>
         </div>
@@ -45,6 +48,14 @@ const Vehicle = (props: VehicleProps) => {
             <li className="pt-4">
               Using the <strong>Dynamic Time Warping (DTW)</strong> algorithm to
               synchronize voltage and current measurements in asynchronous data.
+            </li>
+            <li className="pt-4">
+              Analyzing{" "}
+              <span className="font-bold">internal short circuits</span>{" "}
+              under dynamic discharge conditions using ECM parameters.
+            </li>
+            <li className="pt-4">
+              Building a <strong className="mx-0">GUI</strong> aplication for Kalman Filter Analysis using PyQt
             </li>
           </div>
         </div>

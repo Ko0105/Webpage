@@ -31,12 +31,7 @@ const OCV = (props: RaspberryProps) => {
     </div>
     <div className="w-full lg:w-1/2 bg-gray-800/10 text-teal-800 py-10 px-12 mx-4 shadow-xl">
       <div className="text-justify text-base list-none">
-        <li>
-          Analyzing{" "}
-          <span className="font-bold">internal short circuits</span>{" "}
-          under dynamic discharge conditions using ECM parameters.
-        </li>
-        <li className="pt-4">
+        <li >
           Constructing an algorithm using the ECM to estimate battery
           OCV, resulting in a significant{" "}
           <span className="font-bold">
@@ -49,6 +44,7 @@ const OCV = (props: RaspberryProps) => {
           charging status with an{" "}
           <span className="font-bold">error of less than 2%.</span>
         </li>
+
       </div>
     </div>
   </div>
