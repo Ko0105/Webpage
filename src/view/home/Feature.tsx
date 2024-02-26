@@ -32,8 +32,9 @@ const Feature = () => {
           </CardHeader>
           <CardContent className={"px-12"}>
             <div className="text-xl leading-8 font-extralight tracking-wide   space-y-1 text-left">
-              <li>Estimation of electric vehicle charging status</li>
+              <li>Real-time dynamic state estimation of electric vehicles</li>
               <li>Device for estimating the state of lithium-ion batteries</li>
+              <li>Analysis of lithium metal battery interfaces using CUDA</li>
             </div>
           </CardContent>
           <CardFooter className="justify-end">

@@ -11,7 +11,7 @@ const Dendrite = (props: any) => {
   return (
   <div>
   <h2 className="text-left text-3xl font-bold pb-4 bg-clip-text text-transparent bg-gradient-to-l from-teal-600 to-teal-700">
-  Analysis of lithium metal battery interfaces
+  Analysis of lithium metal battery interfaces using CUDA
   </h2>
   <div className="px-4 text-center md:px-6 flex flex-col lg:flex-row items-center">
     <div className="w-full lg:w-1/2">

@@ -58,7 +58,7 @@ const Dendrite = (props: any) => {
         </li>
         <li className="pt-4">
             
-          Constructing an efficient computational program for local execution using <span className="font-bold">OpenGL and CUDA</span>.
+          Constructing an efficient computational program for local execution using <span className="font-bold">OpenGL</span> and <span className="font-bold">CUDA</span>.
         </li>
       </div>
     </div>
