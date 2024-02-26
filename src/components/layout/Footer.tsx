@@ -17,7 +17,7 @@ const Footer = () => {
         </nav>
         <div className="flex items-center space-x-2">
           <p className="text-xs text-gray-500 dark:text-gray-400">
-            © Chi-Jyun Ko | Last updated on 19 February 2024
+            © Chi-Jyun Ko | Last updated on 26 February 2024
           </p>
         </div>
       </div>

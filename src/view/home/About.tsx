@@ -17,7 +17,7 @@ const About = () => {
               Learning
             </div>
             <h2 className="text-2xl font-bold pb-1">Short Biography</h2>
-            <div className="text-xl font-extralight tracking-wide indent-8 pb-6 leading-9">
+            <div className="text-xl font-extralight text-justify tracking-wide indent-8 pb-6 leading-9">
               I am a third-year Ph.D. student at the Institute of Applied
               Mechanics at National Taiwan University. My research interests
               focus on analyzing Lithium-ion batteries with Machine Learning and
