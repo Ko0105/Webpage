@@ -108,6 +108,28 @@ export default function MyEducation() {
           <div className="grid items-start gap-4 py-8">
             <div className="space-y-2">
               <h2 className="text-2xl font-bold tracking-tight">
+                Estimation of battery temperature during drive cycle operation 
+              by the time evolution of voltage and current. Journal of Energy Storage
+              </h2>
+              <p className="text-gray-500 grid gap-1.5 items-center text-lg dark:text-gray-400">
+                <span>Journal of Energy Storage, 2024</span>
+                {/* <span>•</span> */}
+              </p>
+              <p className="text-lg text-gray-500 dark:text-gray-400">
+                This paper employs Equivalent Circuit Model (ECM) parameters combined with a deep learning model 
+              to estimate the surface temperature of lithium-ion batteries under dynamic current conditions.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <Link href="https://doi.org/10.1016/j.est.2024.112075">
+                <Button type="submit">Read more</Button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid items-start gap-4 py-8">
+            <div className="space-y-2">
+              <h2 className="text-2xl font-bold tracking-tight">
                 Precise prediction of open circuit voltage of lithium ion
                 batteries in a short time period
               </h2>
