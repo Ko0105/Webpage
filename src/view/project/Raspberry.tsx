@@ -62,13 +62,6 @@ const Raspberry = (props: RaspberryProps) => {
       </li>
 
       <li className="pt-4">
-        Using the CN0510 to generate an alternating current signal and
-        applying partial EIS curves for{" "}
-        <span className="font-bold">
-          lithium-ion battery classification.
-        </span>
-      </li>
-      <li className="pt-4">
       Using a Raspberry Pi to apply trained  <span className="font-bold">Machine learning</span> models for battery state analysis.
       </li>
       
