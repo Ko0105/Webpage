@@ -13,6 +13,28 @@ export default function MyEducation() {
           <h1 className="text-3xl font-bold tracking-tight">Journal Papers</h1>
         </div>
         <div className="divide-y divide-gray-100 dark:divide-gray-800">
+
+           <div className="grid items-start gap-4 py-8">
+            <div className="space-y-2">
+              <h2 className="text-2xl font-bold tracking-tight">
+                Influence of concentration-dependent diffusivity on lithium plating: Polarization, 
+                stability, and dendrite formation in phase-field simulations
+              </h2>
+              <p className="text-gray-500 grid gap-1.5 items-center text-lg dark:text-gray-400">
+                <span>Journal of Energy Storage, 2024</span>
+              </p>
+              <p className="text-lg text-gray-500 dark:text-gray-400">
+                The results of this study provide valuable insights for resolving the observed discrepancies 
+                in the onset of lithium dendrite formation between experiments and the classical Sand’s formula.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <Link href="https://doi.org/10.1016/j.est.2024.112615">
+                <Button type="submit">Read more</Button>
+              </Link>
+            </div>
+          </div>
+          
           <div className="grid items-start gap-4 py-8">
             <div className="space-y-2">
               <h2 className="text-2xl font-bold tracking-tight">
@@ -34,6 +56,7 @@ export default function MyEducation() {
               </Link>
             </div>
           </div>
+          
           <div className="grid items-start gap-4 py-8">
             <div className="space-y-2">
               <h2 className="text-2xl font-bold tracking-tight">
