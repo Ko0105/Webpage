@@ -18,12 +18,12 @@ const About = () => {
             </div>
             <h2 className="text-2xl font-bold pb-1">Short Biography</h2>
             <div className="text-xl font-extralight text-justify tracking-wide indent-8 pb-6 leading-9">
-              I am a third-year Ph.D. student at the Institute of Applied
+              I am a fourth-year Ph.D. student at the Institute of Applied
               Mechanics at National Taiwan University. My research interests
               focus on analyzing Lithium-ion batteries with Machine Learning and
               simulating lithium dendrite using C++ and CUDA. During my Ph.D.
               studies, I have published{" "}
-              <span className="font-bold">six top-tier journals</span>, all as
+              <span className="font-bold">ten top-tier journals</span>, all as
               the <span className="font-bold">first author</span>. Recently, I
               collaborated with the Industrial Technology Research Institute
               (ITRI) to draft a patent based on our research findings. My recent
